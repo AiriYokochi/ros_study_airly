@@ -1,0 +1,22 @@
+ROS03
+
+Pub&Sub通信について
+
+ROSNode　　：ROSのプログラムの最小単位。１プロセス。多数のRosノードが通信しあってロボットの処理を行う
+Pub&Sub通信：ROSNode同士の通信の際に使われるフレームワーク
+ROSトピック：ROSトピックの通信に名前を指定してあげる
+
+ROSの開発について
+①ROSパッケージを作る
+　ROSパッケージはsrcディレクトリ無いならどこでもいい
+
+~~~~~~~~~~~~~~　
+cd ~/catkin_ws/src
+mkdir ros_lecture
+cd ~/catkin_ws/src/ros_lecture
+
+catkin_create_pkg basic_lecture std_msgs rospy roscpp
+cd ~/catkin_ws/src/ros_lecture/basic_lecture/src
+touch basic_simple_talker.cpp
+touch basic_simple_listener.cpp
+~~~~~~~~~~~~~~~
