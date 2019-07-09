@@ -1,19 +1,19 @@
-##　本日読んだ講座番号
+## 本日読んだ講座番号
 
 
-##　時間
+## 時間
 10:00~11:05::専用gitリポジトリの作成
 11:05~12:05::ROS03
 13:05~13:25::ROS03のわからんところ調査
 13:25~13:40::ROS04
 
-##　専用gitリポジトリの作成
-###　概要
+## 専用gitリポジトリの作成
+### 概要
 個人用gitの下にros_study_airlyリポジトリを作りました。
 
-###　所感　時間がかかったこと、難しかった、やりたいことなど
+### 所感　時間がかかったこと、難しかった、やりたいことなど
 
-####　全然関係ないけどgit難しい...ローカルからgithubでの操作なしにリポジトリの作成ができなかった...
+#### 全然関係ないけどgit難しい...ローカルからgithubでの操作なしにリポジトリの作成ができなかった...
  1396  mkdir ros_study_airly
  1398  cd ros_study_airly/
  1403  git init
@@ -50,12 +50,12 @@
  1490  git push
 コマンドの打ち間違いでわからんくなりました、最終的に消えなかった；；
 
-##　ROS3　Pub&Sub通信について
-###　概要
+## ROS3　Pub&Sub通信について
+### 概要
 ・PublisherとSubscriberトピック作った
 ・送信するトピックと受信するトピックでメッセージのやり取りをした
 
-###　所感　時間がかかったこと、難しかった、やりたいことなど
+### 所感　時間がかかったこと、難しかった、やりたいことなど
 [疑問]rosrun hoge --this でできなかった。。。
 [調べる]roscore/rosmasterとは
 [調べる]std_msgs::String msg;
@@ -75,7 +75,7 @@ Pub&Sub通信：ROSNode同士の通信の際に使われるフレームワーク
 ROSトピック：ROSトピックの通信に名前を指定してあげる
 
 ROSの開発について
-####　１．ROSパッケージを作る
+#### １．ROSパッケージを作る
 　ROSパッケージはsrcディレクトリ無いならどこでもいい
 　・ros/src/sbgisen下にros_study_airly/basic_lectureを作成
 　・catkin_create_basic_lecture std_msgs rospy roscpp
@@ -86,7 +86,7 @@ cd ~/catkin_ws/src/ros_lecture/basic_lecture/src
 touch basic_simple_talker.cpp
 touch basic_simple_listener.cpp
 '''
-####　２．送信用トピックと受信用トピック、CmakeListsの追加
+#### ２．送信用トピックと受信用トピック、CmakeListsの追加
 CMakeLists.txt
 '''
 #build関係のところ
@@ -94,12 +94,12 @@ add_executable(basic_simple_talker src/CPPNAME.cpp)
 target_link_libraries(basic_simple_listener ${catkin_LIBRARIES})
 '''
 
-####　３．catkin buildでパッケージビルドした
+#### ３．catkin buildでパッケージビルドした
 '''
 catkin build basic_lecture
 '''
 
-#####　エラー出た
+##### エラー出た
 '''
 roscore cannot run as another roscore/master is already running. 
 Please kill other roscore/master processes before relaunching.
@@ -113,16 +113,16 @@ killall -9 rosmaster
 '''
 したら出来た。
 
-##　ROS講座04 roslaunch1
-###　概要
+## ROS講座04 roslaunch1
+### 概要
 roslaunchについて
 launchファイルを作成することで簡単にrosrunが実行できる
 
-###　所感　時間がかかったこと、難しかった、やりたいことなど
+### 所感　時間がかかったこと、難しかった、やりたいことなど
 [メモ]launchファイルを作ってから一度bashすること
 [所感]特になし
 
-###　メモ
+### メモ
 
 ####launchファイルの記述
 ・basic_lecture下にlaunchフォルダを作成
@@ -138,7 +138,7 @@ name:自由につける名前
 pkg:パッケージ名
 type:ROSNodeの元の名前
 
-###　実行方法
+### 実行方法
 bashしてから
 '''
 roslaunch basic_lecture pubsub1/launch
@@ -146,9 +146,9 @@ roslaunch basic_lecture pubsub1/launch
 ※永遠ループして終わらないので注意
 
 
-##　ROS講座05 ROStools
-###　概要
+## ROS講座05 ROStools
+### 概要
 
-###　所感　時間がかかったこと、難しかった、やりたいことなど
+### 所感　時間がかかったこと、難しかった、やりたいことなど
 
-###　メモ
+### メモ
