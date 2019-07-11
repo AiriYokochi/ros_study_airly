@@ -8,3 +8,6 @@ ROSについて勉強したことをまとめます。
   'YYYYMMHH.txt'の形式で一日に見た記事の内容を簡単にメモする
 
 
+## 参考リンク集
+[QIITA ROS講座](https://qiita.com/srs/items/5f44440afea0eb616b4a)
+[ROS公式 環境変数](http://wiki.ros.org/ja/ROS/EnvironmentVariables)
