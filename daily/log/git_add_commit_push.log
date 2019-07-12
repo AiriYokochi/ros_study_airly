@@ -21,3 +21,7 @@
 2019-07-12 12:37:15  (git_add_commit_push.sh:75:add_func) [done] git add .
 2019-07-12 12:37:20  (git_add_commit_push.sh:145:commit_func) [done]commit with message: commit test
 2019-07-12 18:31:53  (git_add_commit_push.sh:75:add_func) [done] git add .
+2019-07-12 18:33:37  (git_add_commit_push.sh:75:add_func) [done] git add .
+2019-07-12 18:33:51  (git_add_commit_push.sh:129:commit_func) [done]commit with message: 20190712.mdの追記 ROS16 ROS18
+2019-07-12 19:37:15  (git_add_commit_push.sh:75:add_func) [done] git add .
+2019-07-12 19:37:30  (git_add_commit_push.sh:129:commit_func) [done]commit with message: 20190712.mdの追記 ROS26

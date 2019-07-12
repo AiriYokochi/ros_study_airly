@@ -30,7 +30,7 @@ stoped(){
 }
 
 # LOG
-LOGFILE="./log/git_add_commit_push.log"
+LOGFILE="../../push_log/git_add_commit_push.log"
 readonly PROCNAME=${0##*/}
 function log() {
   local fname=${BASH_SOURCE[1]##*/}
