@@ -1,29 +1,29 @@
 # Raspberry Pi Mouse Simulator's Tutorial for airy
 
-## 参考
-* [Raspberry Pi Mouse Simulator's Tutorial](https://raspimouse-sim-tutorial.gitbook.io/project/)
-* [how_to_install_simulator_xenial](https://github.com/rt-net/raspimouse_sim/wiki/how_to_install_simulator_xenial) 
-
 ## 本日やったこと
 1. [セットアップ](#セットアップ)
 2. [実行](#実行)
 
-## 時間
+### 参考
+* [Raspberry Pi Mouse Simulator's Tutorial](https://raspimouse-sim-tutorial.gitbook.io/project/)
+* [how_to_install_simulator_xenial](https://github.com/rt-net/raspimouse_sim/wiki/how_to_install_simulator_xenial) 
+
+### 時間
 10:30-12:05::セットアップ\
 13:30-13:35::セットアップ
 
-## 次回やること
+### 次回やること
 シミュレーションのチュートリアルを読む
 * 迷路の表示
 * 距離センサーを使ってみる
 
-## 所感　時間がかかったこと、難しかった、やりたいことなど
+### 所感　時間がかかったこと、難しかった、やりたいことなど
 <!-- 
 [解決/未解決/所感/疑問/参考など]
 [参考][記事名](URL)
  -->
 * イナーシャの値やkpkdの値が難しい
----
+
 ---
 ## セットアップ
 ### 概要
@@ -46,7 +46,9 @@ Raspberry Pi Mouse Simulatorのインストールをする。\
 git clone https://github.com/rt-net/raspimouse_sim.git
 catkin build
 ```
+
 [トップへ](#本日やったこと)
+
 ---
 ## 実行
 ### 概要
