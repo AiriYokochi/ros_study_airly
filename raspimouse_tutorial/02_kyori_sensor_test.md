@@ -1,12 +1,14 @@
 # Raspberry Pi Mouse Simulator's Tutorial for airy
 
 [前回の記事](./01_setup.md) 
+[次の記事](./00_Inventor.md)
 
 ## 本日やったこと
 1. [迷路の表示](#迷路の表示)
 2. [Part1_距離センサの値の読み取り方](#Part1_距離センサの値の読み取り方)
 3. [Part2_モータの動かし方](#Part2_モータの動かし方)
-4. [Part4_コントローラを用いたラズパイマウスの動かし方](#Part4_コントローラを用いたラズパイマウスの動かし方)
+4. [Part3_キーボードを用いたラズパイマウスの動かし方](#Part3_キーボードを用いたラズパイマウスの動かし方)
+5. [Part4_コントローラを用いたラズパイマウスの動かし方](#Part4_コントローラを用いたラズパイマウスの動かし方)
 
 ### 参考
 * [Raspberry Pi Mouse Simulator's Tutorial](https://raspimouse-sim-tutorial.gitbook.io/project/)
