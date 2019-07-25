@@ -20,14 +20,9 @@
 * ROSサービスの調査
 
 ### 所感　時間がかかったこと、難しかった、やりたいことなど
-<!-- 
-[解決/未解決/所感/疑問/参考など]
-[参考][記事名](URL)
- -->
 [調べる] xacroからworldに変換する方法について、xacroのオプションについて\
-[調べる] `Warning [parser.cc:759] XML Attribute[xmlns:xacro] in element[sdf] not defined in SDF, ignoring.`\
-[解決]　`ERROR: Service [/motor_on] is not available.` -> raspi_ros_2の起動をする
----
+[調べる] Warning [parser.cc:759] XML Attribute[xmlns:xacro] in element[sdf] not defined in SDF, ignoring. \
+[解決]　ERROR: Service [/motor_on] is not available. -> raspi_ros_2の起動をする
 
 ## ROSサービスとは
 
