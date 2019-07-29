@@ -208,9 +208,7 @@ Connections:
 ```
 [rqt_graphの結果](/images/lefthand.py)\
 raspimouse_ros_2/MotorFreqs型のモーター周波数をパブリッシュすることと、\
-rosgraph_msgs/Clock型のgazebo上の時間\
-raspimouse_ros_2/LightSensorValues型の光センサーの値を\
-サブスクライブすることがわかる
+rosgraph_msgs/Clock型のgazebo上の時間とraspimouse_ros_2/LightSensorValues型の光センサーの値をサブスクライブすることがわかる
 
 
 #### rostopic echo
@@ -228,7 +226,6 @@ sum_forward: 4172
 left_hz: 200
 right_hz: -200
 ```
-* /motor_raw\
 
 #### 流れ
 ##### mainクラス
@@ -250,105 +247,105 @@ LeftHandクラスのrunメソッドを実行
 
 ###### メソッド
 1. コンストラクタ::
-* LeftHandクラスがインスタンス時に呼ばれる
-    * 光センサの値のサブスクライブをセット
-    * モータに周波数を入力するパブリッシャーセット
-    * シミュレータを初期状態にする
-    * ls_count,rs_countを0に初期化する
+    * LeftHandクラスがインスタンス時に呼ばれる
+        * 光センサの値のサブスクライブをセット
+        * モータに周波数を入力するパブリッシャーセット
+        * シミュレータを初期状態にする
+        * ls_count,rs_countを0に初期化する
 
 2. sensor_callback::
-* 引数は1, data:LightSensorValues型のデータ
-* 光センサーの値をサブスクライブした時に呼ばれる
-    * dataにLightSensorValues型のメッセージを保存する
+    * 引数は1, data:LightSensorValues型のデータ
+    * 光センサーの値をサブスクライブした時に呼ばれる
+        * dataにLightSensorValues型のメッセージを保存する
 
 3. motor_cont::
-* 引数は2, left_hz,right_hz:int型の左右輪の周波数
-* どんなときにどこから呼ばれる
-    * rospyがシャットダウンしていない時に両輪の周波数を設定する
-    * 設定した周波数をパブリッシュする
+    * 引数は2, left_hz,right_hz:int型の左右輪の周波数
+    * どんなときにどこから呼ばれる
+        * rospyがシャットダウンしていない時に両輪の周波数を設定する
+        * 設定した周波数をパブリッシュする
 
 4. turn_move::
-* 引数は1, m:String型のデータで"LEFT", "RIGHT"が入る
-    * LEFTの場合は左回りになるように両輪の周波数を設定しmotor_contを呼ぶ
-    * RIGHTの場合は右回りになるように両輪の周波数を設定しmotor_contを呼ぶ
+    * 引数は1, m:String型のデータで"LEFT", "RIGHT"が入る
+        * LEFTの場合は左回りになるように両輪の周波数を設定しmotor_contを呼ぶ
+        * RIGHTの場合は右回りになるように両輪の周波数を設定しmotor_contを呼ぶ
 
 5. move_Feedback::
-* 引数は4
-    * offset:基準値, speed k：ゲイン, mode:左旋回中か右旋回中か 
-    * 左側面の光センサの値が大きい時、左に壁があるとき右旋回する
-        * data.left_sideが1500より大きい時はturn_moveを呼ぶ
-    * 右側面の光センサの値が大きい時、右に壁があるとき左旋回する
-        * data.right_sideが1500より大きい時はturn_moveを呼ぶ
-    * 壁沿いを追従走行する
-        * "LEFT"modeのとき、差分を計算してモータに出力？
-            * 差分は(基準値-左側面の光センサの値)* ゲイン
-            * モータに出力する値は右輪に(現在の速度-差分)　左輪に(現在の速度+差分)
-        * "RIGHT"modeのとき、差分を計算してモータに出力？
-            * 差分は(基準値-右側面の光センサの値)* ゲイン
-            * モータに出力する値は右輪に(現在の速度+差分)　左輪に(現在の速度-差分)
+    * 引数は4
+        * offset:基準値, speed k：ゲイン, mode:左旋回中か右旋回中か 
+        * 左側面の光センサの値が大きい時、左に壁があるとき右旋回する
+            * data.left_sideが1500より大きい時はturn_moveを呼ぶ
+        * 右側面の光センサの値が大きい時、右に壁があるとき左旋回する
+            * data.right_sideが1500より大きい時はturn_moveを呼ぶ
+        * 壁沿いを追従走行する
+            * "LEFT"modeのとき、差分を計算してモータに出力？
+                * 差分は(基準値-左側面の光センサの値)* ゲイン
+                * モータに出力する値は右輪に(現在の速度-差分)　左輪に(現在の速度+差分)
+            * "RIGHT"modeのとき、差分を計算してモータに出力？
+                * 差分は(基準値-右側面の光センサの値)* ゲイン
+                * モータに出力する値は右輪に(現在の速度+差分)　左輪に(現在の速度-差分)
 
 6. stopMove::
-* 終了時にモータを止める
+    * 終了時にモータを止める
 
 7. checker::
-* 壁なし判定をする
-    * left_sideが100より小さい
-        * RS_COUNTでleft_sideを標準出力する？
-        * rs_countをインクリメントする
-    * right_sideが150より小さい
-        * LS_COUNTでright_sideを標準出力する
-        * ls_countをインクリメントする
+    * 壁なし判定をする
+        * left_sideが100より小さい
+            * RS_COUNTでleft_sideを標準出力する？
+            * rs_countをインクリメントする
+        * right_sideが150より小さい
+            * LS_COUNTでright_sideを標準出力する
+            * ls_countをインクリメントする
 
 8. motion::
-* 動作部分
-    * 左側に壁がある確率が高くて目の前に壁がなさそうなとき
-        * "Move:STRAIGHT"を標準出力
-        * for time in range(12) 12単位分の時間だけ
-            * 壁なし判定をする
-            * 左の壁が右の壁より近いとき、move_Feedbackを呼ぶ
-                * 基準値500 スピード500 ゲイン0.2 モードLEFT
-            * 右の壁が左の壁より近いとき、move_Feedbackを呼ぶ
-                * 基準値500 スピード500 ゲイン0.2 モードRIGHT
-            * 待つ
-        * モータを止める
-
-        * 目の前に壁がなくて右に壁がない場合
-            * rs_countが0より大きければ"Move :MID LEDT TURN"標準出力
-            * 10単位分の時間だけ
-                * 左旋回して待つ
+    * 動作部分
+        * 左側に壁がある確率が高くて目の前に壁がなさそうなとき
+            * "Move:STRAIGHT"を標準出力
+            * for time in range(12) 12単位分の時間だけ
+                * 壁なし判定をする
+                * 左の壁が右の壁より近いとき、move_Feedbackを呼ぶ
+                    * 基準値500 スピード500 ゲイン0.2 モードLEFT
+                * 右の壁が左の壁より近いとき、move_Feedbackを呼ぶ
+                    * 基準値500 スピード500 ゲイン0.2 モードRIGHT
+                * 待つ
             * モータを止める
-        * 目の前に壁があった時
-            * 左右に壁がない場合は
-                * rs_count ls_countが0より大きければ"Move: LEFT TURN_2"を標準出力
-                * 10単位分の時間だけ左旋回して待つ
+
+            * 目の前に壁がなくて右に壁がない場合
+                * rs_countが0より大きければ"Move :MID LEDT TURN"標準出力
+                * 10単位分の時間だけ
+                    * 左旋回して待つ
                 * モータを止める
-            * ls_countが0より大きい場合、右の壁がない場合は"Move: RIGHT TURN"と出力して
-                * 10単位分の時間だけ右旋回して待つ
-                * モータを止める
-            * rs_countが０より大きい、左の壁がない場合は"Move: LEFT TURN"と出力して
-                * １０単位分左旋回して待つ
-                * モータを止める
-        * ls_count, rs_countを０で初期化する
-        * return 
-    * 左右関係なく目の前に壁があるとき
-        * "Move:DEAD END"と出力し２０単位分の時間だけ左旋回して待つ
-        * モータを止める
-        * ls_count, rs_countを０で初期化する
-        * return
-    * 左の壁が右の壁より近いとき、move_Feedbackを呼ぶ
-        * 基準値500 スピード500 ゲイン0.2 モードLEFT
-    * 右の壁が左の壁より近いとき、move_Feedbackを呼ぶ
-        * 基準値500 スピード500 ゲイン0.2 モードRIGHT
+            * 目の前に壁があった時
+                * 左右に壁がない場合は
+                    * rs_count ls_countが0より大きければ"Move: LEFT TURN_2"を標準出力
+                    * 10単位分の時間だけ左旋回して待つ
+                    * モータを止める
+                * ls_countが0より大きい場合、右の壁がない場合は"Move: RIGHT TURN"と出力して
+                    * 10単位分の時間だけ右旋回して待つ
+                    * モータを止める
+                * rs_countが０より大きい、左の壁がない場合は"Move: LEFT TURN"と出力して
+                    * １０単位分左旋回して待つ
+                    * モータを止める
+            * ls_count, rs_countを０で初期化する
+            * return 
+        * 左右関係なく目の前に壁があるとき
+            * "Move:DEAD END"と出力し２０単位分の時間だけ左旋回して待つ
+            * モータを止める
+            * ls_count, rs_countを０で初期化する
+            * return
+        * 左の壁が右の壁より近いとき、move_Feedbackを呼ぶ
+            * 基準値500 スピード500 ゲイン0.2 モードLEFT
+        * 右の壁が左の壁より近いとき、move_Feedbackを呼ぶ
+            * 基準値500 スピード500 ゲイン0.2 モードRIGHT
 
 9. init::
-* gazeboワールドのリセットとモータの通電を行う
-    * modeSimResetができている時
-        * /gazebo/reset_worldサービスが使えるまで待つ
-        * /gazebo/reset_worldのサービスをEmptyで呼ぶ
-            * エラーキャッチしたら内容を表示
-        * /motor_onのサービスが使えるまで待つ
-        * /motor_onのサービスをTriggerで呼ぶ
-            * エラーキャッチしたら内容を表示
+    * gazeboワールドのリセットとモータの通電を行う
+        * modeSimResetができている時
+            * /gazebo/reset_worldサービスが使えるまで待つ
+            * /gazebo/reset_worldのサービスをEmptyで呼ぶ
+                * エラーキャッチしたら内容を表示
+            * /motor_onのサービスが使えるまで待つ
+            * /motor_onのサービスをTriggerで呼ぶ
+                * エラーキャッチしたら内容を表示
 10. run::
     * 10Hzで設定
     * initを呼んでgazeboワールドのリセットとモータの通電を行う
@@ -710,45 +707,45 @@ target_link_libraries(lefthand ${catkin_LIBRARIES})
 ##### Pythonとの違い
 * データ型の定義
     * Python
-    ```
-    self.data = LightSensorValues()
-    ```
+        ```
+        self.data = LightSensorValues()
+        ```
     * C++
-    ```
-    raspimouse_ros_2::LightSensorValues lightsensor;
-    ```
+        ```
+        raspimouse_ros_2::LightSensorValues lightsensor;
+        ```
 * ros::init
     * Python
-    ```
-    rospy.init_node('LeftHand')
-    ```
+        ```
+        rospy.init_node('LeftHand')
+        ```
     * C++
-    ```
-    ros::init(argc, argv, "lefthand");
-    ```
+        ```
+        ros::init(argc, argv, "lefthand");
+        ```
 * NodeHandle, SpinOnceの有無
     rospyにはNodeHandle,SpinOnceがない
 * ros::ok
     * Python
-    ```
-    rospy.on_shutdown(self.stopMove)
-    while not rospy.is_shutdown():
-        self.motion()
-        self.rate.sleep()
-    ```
+        ```
+        rospy.on_shutdown(self.stopMove)
+        while not rospy.is_shutdown():
+            self.motion()
+            self.rate.sleep()
+        ```
     * C++
-    ```
-    while (ros::ok()) {
-        motion();
-        ros::spinOnce();
-        loop_rate.sleep();    
-    }
-    ```
+        ```
+        while (ros::ok()) {
+            motion();
+            ros::spinOnce();
+            loop_rate.sleep();    
+        }
+        ```
 ##### ROSサービスの使い方
 * include
-```
-#include <std_srvs/Trigger.h>
-```
+    ```
+    #include <std_srvs/Trigger.h>
+    ```
 * 実際のコード一部
 ros::ServiceClientを使う
 ```
@@ -768,7 +765,7 @@ ros::ServiceClientを使う
     }
 ```
 ##### Pub&Subを両方やるとき
-多分タイミングが合わないと値が入らない？後で書く
+多分タイミングが合わないと値が入らない？後で調査
 ```
     //モータの周波数をパブリッシュする
     motor_freq_pub = n.advertise<raspimouse_ros_2::MotorFreqs>("/motor_raw", 1);
