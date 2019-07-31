@@ -97,6 +97,7 @@ PS3コントローラを用いてラズパイマウスを動かす。\
 gmappingの後にJOYノードを起動するとgamappingが落ちるので注意
 ```
 roslaunch basic_lecture turtle.launch
+roslaunch raspimouse_ros_2 raspimouse.launch
 roslaunch raspimouse_gazebo raspimouse_with_willowgarage.launch
 roslaunch raspimouse_sim_tutorial raspimouse_sim_gmapping.launch
 ```
@@ -119,6 +120,8 @@ rosrun map_server map_saver -f map/room
 ```
 
 ### 理解
+[次の記事](./06_slam_using_urg_Part2.md)へ
+
 [トップへ](#内容)
 
 <!--
