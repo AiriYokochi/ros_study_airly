@@ -1,0 +1,44 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/gisen/ros/devel/include",
+                "/opt/ros/kinetic/include",
+                "/home/gisen/ros/src/racecar/ackermann_cmd_mux/include",
+                "/home/gisen/ros/src/sbgisen/cube/cube_base_local_planner/include",
+                "/home/gisen/ros/src/sbgisen/ros_study_airly/basic_lecture/include",
+                "/home/gisen/ros/src/car-maneuver-recovery/include",
+                "/home/gisen/ros/src/clear_and_rotate_recovery/include",
+                "/home/gisen/ros/src/sbgisen/cube/cube_control/include",
+                "/home/gisen/ros/src/ros_controllers/diff_drive_controller/include",
+                "/home/gisen/ros/src/iai_kinect2/kinect2_bridge/include",
+                "/home/gisen/ros/src/iai_kinect2/kinect2_calibration/include",
+                "/home/gisen/ros/src/iai_kinect2/kinect2_registration/include",
+                "/home/gisen/ros/src/quanergy_client_ros/include",
+                "/home/gisen/ros/src/sbgisen/cube/cube_navigation_layers/range_sensor_layer/include",
+                "/home/gisen/ros/src/rospeex/rospeex_audiomonitor/include",
+                "/home/gisen/ros/src/rospeex/rospeex_if/include",
+                "/home/gisen/ros/src/sbgisen/ros_study_airly/sim1_lecture/include",
+                "/home/gisen/ros/src/sbgisen/ros_study_airly/sim1_lecture2/include",
+                "/home/gisen/ros/src/sbgisen/cube/cube_navigation_layers/social_navigation_layers/include",
+                "/home/gisen/ros/src/steer_drive_ros/steer_bot_hardware_gazebo/include",
+                "/home/gisen/ros/src/steer_drive_ros/steer_drive_controller/include",
+                "/home/gisen/ros/src/steer_drive_ros/stepback_and_steerturn_recovery/include",
+                "/home/gisen/ros/src/vesc/vesc_ackermann/include",
+                "/home/gisen/ros/src/vesc/vesc_driver/include",
+                "/home/gisen/ros/src/sbgisen/ros_study_airly/vis_lecture/include",
+                "/usr/include"
+            ],
+            "name": "Linux",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/clang-3.6",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

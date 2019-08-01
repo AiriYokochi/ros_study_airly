@@ -1,0 +1,20 @@
+<robot name="test_robot">
+    <material name="red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+    </material>
+    <link name="world"/>
+    <link name="base_link"/>
+    <link name="body_link"/>
+
+    <joint name="base_joint" type="fixed"><!-- rostopic echo -n 1 /tf_static  -->
+        <parent link="world"/>
+        <child link="base_link"/>
+    </joint>
+
+    <joint name="joint1" type="floating">
+        <parent link="base_link"/>
+        <child link="body_link"/>
+    </joint>
+
+</robot>
+
