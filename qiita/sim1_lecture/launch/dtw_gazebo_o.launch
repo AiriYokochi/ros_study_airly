@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <param name="/dtw_robot/diff_drive_controller/enable_odom_tf" value="true" />
+    <node name="sim1_model_tf_publisher" pkg="sim1_lecture" type="sim1_model_tf_publisher">
+      <param name="model_name" value="RasPiMouseV2" />
+      <param name="base_frame" value="base_footprint" />
+      <param name="world_frame" value="odom" />
+    </node>
+
+
+
+</launch>
