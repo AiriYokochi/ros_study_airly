@@ -7,7 +7,7 @@ geometry_msgs::Twist cmd_vel; //turtle_simに送信するgeometry_msgs::Twist型
 //joystickが押された時に代入する
 void joy_callback(const sensor_msgs::Joy& joy_msg){
     cmd_vel.linear.x = joy_msg.axes[1];
-    cmd_vel.angular.z = joy_msg.axes[0];
+    cmd_vel.angular.z = joy_msg.axes[0]*10;
 }
 
 int main(int argc, char **argv){
