@@ -1,4 +1,4 @@
-# 1_gazebo.md
+# 2_gmmaping.md
 
 [前記事　0_hoge.md](0_hoge.md)←　→[次記事](2_gmapping.md)
 
@@ -35,10 +35,6 @@ roslaunch cube_navigation gmapping.launch scan:=map_scan
 [自室を想定したスペース](images/airi_room.pgm)を地図作成した\
 [rqt_graphの結果](images/cube_gmapping_rqt_graph.png)
 
-
-
----
----
 
 [トップへ](#本日やったこと)
 
