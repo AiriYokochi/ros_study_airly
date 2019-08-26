@@ -1,22 +1,11 @@
 # 2_gmmaping.md
 
-[前記事　0_hoge.md](0_hoge.md)←　→[次記事](2_gmapping.md)
+[前記事　1_gazebo.md](1_gazebo.md)←　→[次記事 3_navigation.md](3_navigation.md)
 
-gazeboでロボットを表示する\
-自室を想定したワールドファイルを自作した\
+gazeboで地図作成を行う\
+[前記事　1_gazebo.md](1_gazebo.md)で作成したワールドファイルを用いた。
 
 ## 参考リンク
-
-* nodelet[ROS nodeletの使い方](http://cryborg.hatenablog.com/entry/2016/09/19/154712)
-    ROSノードのpub/sub通信ではメモリ空間を共有できないので、受け渡すデータにコピーが生じる\
-    -> 画像などの大きいデータを送信する、小型ロボットに載せる等でリソースが足りなくなる\
-    -> 通常のnodeと同じpub/subの仕組みをプロセス間(ノード間)ではなく同プロセス内のスレッド間でやり取りする\
-    使い方は、nodelete managerというノードに複数のnode letクラスをloadしていく\
-    manager起動コマンドは```rosrun nodelet nodelet manager <manager_name>```\
-    classのロードコマンドは```rosrun nodelet nodelet load <pkg_name>/<nodelet_class_name> <manager_name>```\
-    共有ライブラリを作成する\
-    shared ptr参照可能\
-    nodeletを普通のROSノードとして起動するコマンド```rosrun nodelet nodelet standalone <pkg_name>/<nodelet_class_name>```\
 
 ## 開発環境
 
@@ -27,7 +16,9 @@ gazeboでロボットを表示する\
 ## 起動コマンド
 
 ```
+roslaunch cube_gazebo cuboid_with_house.launch
 roslaunch cube_navigation gmapping.launch scan:=map_scan
+roslaunch basic_lecture joystick.launch(自作。cube_teleopのコメント外してやったほうが良い)
 ```
 
 ## 結果
