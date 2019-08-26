@@ -2,7 +2,7 @@
 
 [前記事　2_gmapping.md](2_gmapping.md)←　→[次記事 4_hoge.md](3_navigation.md)
 
-gazeboでnavigationを行う\
+gazeboでnavigationを行う
 
 
 ## 参考リンク
