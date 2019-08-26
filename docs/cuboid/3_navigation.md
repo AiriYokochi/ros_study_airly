@@ -1,4 +1,4 @@
-# 2_gmmaping.md
+# 3_navigation.md
 
 [前記事　2_gmapping.md](2_gmapping.md)←　→[次記事 4_hoge.md](3_navigation.md)
 
@@ -47,11 +47,16 @@ roslaunch cube_navigation navigation.launch map_file:=/home/gisen/ros/src/sbgise
 * amcl::レーザセンサを用いて自己位置推定を行う
 * move_base::ゴールを設定したときにその場所まで移動する
 
+## 立ち入り禁止区域を指定する
+地図(pgm)データで、ImageMagicを用いて立ち入り禁止区域に黒線を塗った\
+[立ち入り禁止区域の地図](images/airi_room_keepout.pgm)\
+またnavigationを起動する際に引数としてmap_keep_fileにyamlファイルの絶対パス、とuse_keepoutにtrueを設定する。
+
 ## 結果
 
-[navigation中のスクリーンショット](images/20190823_navigation_sc.png)\
+[navigation中のスクリーンショット](images/20190823_navigation_sc.png)
 
-
+---
 [トップへ](#本日やったこと)
 
 <!--
