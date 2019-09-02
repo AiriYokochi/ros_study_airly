@@ -1,6 +1,6 @@
 # 3_navigation.md
 
-[前記事　2_gmapping.md](2_gmapping.md)←　→[次記事 4_hoge.md](3_navigation.md)
+[前記事　2_gmapping.md](2_gmapping.md)←　→[次記事 4_explorer.md](4_exprlorer.md)
 
 gazeboでnavigationを行う
 
@@ -57,7 +57,7 @@ roslaunch cube_navigation navigation.launch map_file:=/home/gisen/ros/src/sbgise
 [navigation中のスクリーンショット](images/20190823_navigation_sc.png)
 
 ---
-[トップへ](#本日やったこと)
+[トップへ](#3_navigation.md)
 
 <!--
 ```
