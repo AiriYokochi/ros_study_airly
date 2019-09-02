@@ -6,7 +6,7 @@ ROSについて勉強したことをまとめます。
 
 # docs/
 
-# cuboid/
+## cuboid/
 
 概要：[README.md](docs/cuboid/README.md)\
 cuboidの使い方に関してメモする
