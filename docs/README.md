@@ -1,26 +1,25 @@
 # ros_study_airly/docs
 
-ROSについて勉強したことをまとめます。
-進め方は
-[QIITA](https://qiita.com/srs/items/5f44440afea0eb616b4a#_reference-6e2f36d9054be864505e)を写経するスタイルで
+ROSについて勉強したこと
 
-# cuboid
+# cuboid/
 
-cuboidの使い方に関してメモする\
-概要はcuboid下の[README.md](cuboid/README.md)を参照
+概要：[README.md](cuboid/README.md)\
+cuboidの使い方に関してメモする
 
 # daily/
 
-'YYYYMMHH.txt'の形式で一日に見た記事の内容を簡単にメモする\
-概要はdaily下の[README.md](daily/README.md)を参照
+概要：[README.md](daily/README.md)\
+'YYYYMMHH.txt'の形式で一日に見た記事の内容を簡単にメモする
 
-* QIITAのROS講座：詳しくは[QIITA ROS講座まとめ](daily/qiita_info.md)を確認
-* ラズパイマウスシミュレーターのチュートリアル
+* [QIITA ROS講座まとめ](daily/qiita_info.md):7月分とROS講座の回数対応
+* 実用ロボット開発のためのROSプログラミング
 
 # raspimouse_tutorial/
 
-  [Raspberry Pi Mouse Simulator's Tutorial](https://raspimouse-sim-tutorial.gitbook.io/project/setup/how_to_install_simulator)で詰まったところなどをメモする\
-  開始:2019/07/19~
+概要：[README.md](raspimouse_tutorial/README.md)\
+[Raspberry Pi Mouse Simulator's Tutorial](https://raspimouse-sim-tutorial.gitbook.io/project/setup/how_to_install_simulator)で詰まったところなどをメ\
+開始:2019/07/19~2019/07/31
 
 ## 参考リンク集
 
