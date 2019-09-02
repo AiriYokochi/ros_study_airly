@@ -2,6 +2,8 @@
 
 ROSについて勉強したことをまとめます。
 
+---
+
 # docs/
 
 # cuboid/
@@ -9,7 +11,7 @@ ROSについて勉強したことをまとめます。
 概要：[README.md](docs/cuboid/README.md)\
 cuboidの使い方に関してメモする
 
-# daily/
+## daily/
 
 概要：[README.md](docs/daily/README.md)\
 'YYYYMMHH.txt'の形式で一日に見た記事の内容を簡単にメモする
@@ -17,12 +19,13 @@ cuboidの使い方に関してメモする
 * [QIITA ROS講座まとめ](docs/daily/qiita_info.md):7月分とROS講座の回数対応
 * 実用ロボット開発のためのROSプログラミング
 
-# raspimouse_tutorial/
+## raspimouse_tutorial/
 
 概要：[README.md](docs/raspimouse_tutorial/README.md)\
 [Raspberry Pi Mouse Simulator's Tutorial](https://raspimouse-sim-tutorial.gitbook.io/project/setup/how_to_install_simulator)で詰まったところなどをメ\
 開始:2019/07/19~2019/07/31
 
+---
 
 # qiita/
 
