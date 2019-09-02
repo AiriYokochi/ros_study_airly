@@ -10,3 +10,5 @@ cuboidの使い方に関してメモする\
     * 作成した地図を用いて、設定した目的地まで向かう
 * [4_explorer.md](4_explorer.md)
     * 未知の探索部分を探索し地図を作る
+* [5_costmap_common.yaml.md](5_costmap_common.yaml.md)
+    * navigationで使用するパラメータファイルの内容
