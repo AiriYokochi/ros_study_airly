@@ -33,4 +33,13 @@
     * open-jtalkで音声合成
     * Google Cloud APIで音声認識
     * Emphath APIで音声感情認識
-    
+
+# 201910
+* [20191001.md](201910/20191001.md)
+    * MX-28をdynamixel_control_hwで動かす
+* [20191002.md](201910/20191002.md)    
+    * cube-petit作成(motor編)
+    * cube-petit作成(urdf編)
+    * cube-petit作成(teleop編)
+    * cube-petit作成(lidar編)
+    * cube-petit作成(ファイル構成編)
