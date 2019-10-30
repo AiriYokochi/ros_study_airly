@@ -43,3 +43,15 @@
     * cube-petit作成(teleop編)
     * cube-petit作成(lidar編)
     * cube-petit作成(ファイル構成編)
+* [20191007.md](201910/20191007.md)
+    * raspberryPi3にUbuntu16.04とROSを導入する
+    * rasbberriPi4にUbuntu18.04とROSを導入する
+* [20191011.md](201910/20191011.md)
+    * M5GO
+    * realsense SR305のrosパッケージ導入
+    * Cubeくんグッズ作成
+    * seek-thermalを使ってみる
+    * cube-petit(部品発注編)
+    * cube-petit(センサ構成編)
+    * git submoduleについて
+    * ラズパイのセットアップ
