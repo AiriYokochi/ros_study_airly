@@ -63,3 +63,19 @@
 * [20191111.md](201911/20191111.md)
     * cube-petit(Inventor編)
     * cube-petit(レーザ加工編)
+* [20191125.md](201911/20191125.md)
+    * cube-petit(ros melodic用依存パッケージの導入)
+    * cube-petit(U2D2の設定)
+    * cube-petit(teleop_twist_joyパッケージの導入)
+
+## 201912
+* [20191210.md](201912/20191210.md)
+    * cube-petit(config.txtの変更)
+    * cube-petit(音を鳴らす)
+    * cube-petit(teleop_twist_joyパッケージの導入)
+* [20191220.md](201912/20191220.md)
+    * raspberryPi4でbluetoothを有効にする
+    * raspberryPi4でLINEビーコンを使う
+    * raspberryPi4でgmapping
+* [20191223.md](201912/20191223.md)
+    * cube-petit(scan_to_scan_filter_chainパッケージの導入)
