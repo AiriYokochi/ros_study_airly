@@ -18,7 +18,7 @@ cuboidの使い方に関してメモする
 # raspimouse_tutorial/
 
 概要：[README.md](raspimouse_tutorial/README.md)\
-[Raspberry Pi Mouse Simulator's Tutorial](https://raspimouse-sim-tutorial.gitbook.io/project/setup/how_to_install_simulator)で詰まったところなどをメ\
+[Raspberry Pi Mouse Simulator's Tutorial](https://raspimouse-sim-tutorial.gitbook.io/project/setup/how_to_install_simulator)で詰まったところなどをメモ
 開始:2019/07/19~2019/07/31
 
 ## 参考リンク集
