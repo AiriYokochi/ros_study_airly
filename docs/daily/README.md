@@ -81,7 +81,7 @@
     2. raspberryPi4でLINEビーコンを使う
     3. raspberryPi4でgmapping
 * [20191223.md](201912/20191223.md)
-    1 cube-petit(scan_to_scan_filter_chainパッケージの導入)
+    1. cube-petit(scan_to_scan_filter_chainパッケージの導入)
     2. PS3コントローラをBluetooth接続する
     3. デバイスファイル名を固定する・検索する
     4. Realsense導入1
