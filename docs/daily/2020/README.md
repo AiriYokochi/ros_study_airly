@@ -26,3 +26,7 @@
 * [20200106.md](202001/20200106.md)
     1. move_baseについての調査
     2. costmap_2dパッケージ
+
+* [20200107.md](202001/20200107.md)
+    1. base_local_plannerについて
+    2. global_plannerについて
