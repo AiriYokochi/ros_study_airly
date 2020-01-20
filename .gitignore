@@ -1,2 +1,5 @@
 *.log
 daily/log/
+qiita/\.vscode/
+
+\.vscode/
