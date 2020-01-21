@@ -44,3 +44,8 @@
     1. AMCLのファイル構成
     2. cube-petit(ファイル構成)
 
+* [20200120.md](202001/20200120.md)
+    1. cube-petit(openjtalk_speakerの導入)
+    2. REALSENSE導入(gazebo編)
+    3. SpatioTemporalVoxelLayer
+    4. カメラのキャリブレーション
