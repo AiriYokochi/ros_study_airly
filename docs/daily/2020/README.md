@@ -49,3 +49,11 @@
     2. REALSENSE導入(gazebo編)
     3. SpatioTemporalVoxelLayer
     4. カメラのキャリブレーション
+
+* [20200213.md](202002/20200213.md)
+    1. miniPCにUbuntu18.04LTSとROS melodicを導入する
+    2. Ubuntuのgrub設定について 
+    3. Ubuntu16/18でのBuffaroネットワークドライバ設定
+    4. dpkg, checkinstallについて
+    5. Ubuntu18.04でREALSENSEパッケージをaptインストールする
+    6. Cube-petitのセットアップ
